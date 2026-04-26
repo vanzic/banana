@@ -3,12 +3,12 @@ package com.vixcy.banana
 import okhttp3.*
 import org.json.JSONArray
 import java.io.IOException
+import com.vixcy.banana.BuildConfig
 
 object SupabaseFetcher {
 
-    private const val SUPABASE_URL = "https://qjzgjtgghlhhitgokubr.supabase.co"
-    private const val SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFqemdqdGdnaGxoaGl0Z29rdWJyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcwNDM1ODYsImV4cCI6MjA5MjYxOTU4Nn0.CMQReI9IGNY17LeU7js86UfmpSzGuUMW8fMp3cmemZs"
-
+    private val SUPABASE_URL = BuildConfig.SUPABASE_URL
+    private val SUPABASE_KEY = BuildConfig.SUPABASE_KEY
 
     private val client = OkHttpClient()
 
