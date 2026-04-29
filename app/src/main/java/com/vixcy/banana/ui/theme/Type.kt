@@ -1,34 +1,21 @@
 package com.vixcy.banana.ui.theme
 
 import androidx.compose.material3.Typography
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.sp
+import com.vixcy.banana.ui.Banana
 
-// Set of Material typography styles to start with
+// Material3 Typography wired to our Banana type scale.
+// Most screens read directly from Banana.Type — this exists so MaterialTheme
+// defaults (Buttons, Surfaces, etc.) inherit a sensible base.
 val Typography = Typography(
-    bodyLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
-    )
-    /* Other default text styles to override
-    titleLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 22.sp,
-        lineHeight = 28.sp,
-        letterSpacing = 0.sp
-    ),
-    labelSmall = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Medium,
-        fontSize = 11.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 0.5.sp
-    )
-    */
+    displayLarge   = Banana.Type.display,
+    displayMedium  = Banana.Type.largeTitle,
+    titleLarge     = Banana.Type.title,
+    titleMedium    = Banana.Type.title2,
+    titleSmall     = Banana.Type.headline,
+    bodyLarge      = Banana.Type.body,
+    bodyMedium     = Banana.Type.bodyMedium,
+    bodySmall      = Banana.Type.callout,
+    labelLarge     = Banana.Type.headline,
+    labelMedium    = Banana.Type.captionBold,
+    labelSmall     = Banana.Type.tagLabel
 )
